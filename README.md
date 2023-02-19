@@ -43,7 +43,7 @@ source .devops/bin/activate
 
 
 ### 2. Run in Docker: 
-- Install docker by downloading and installing here [here](https://www.docker.com/)
+- Install docker by downloading and installing 
 - create a docker hub
 - login in to docker hub using `docker login`
 - run `./run_docker.sh` to create an image 
