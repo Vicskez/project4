@@ -36,15 +36,33 @@ source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
 
-### Running `app.py`
+### Running applicaiton
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+### 1. Standalone: 
+ `python app.py`
+
+
+### 2. Run in Docker: 
+- Install docker by downloading and installing here [here](https://www.docker.com/)
+- create a docker hub
+- login in to docker hub using `docker login`
+- run `./run_docker.sh` to create an image 
+- push your image to docker hub by running the command `./upload_docker.sh`
+- application will start following the execution of this script on port 8000.
+- run ./make_prediction.sh to get result of prediction
+
+
+### 3. Run in Kubernetes:
+- start docker desktop
+- Setup and Configure Kubernetes locally
+    * install kubectl 
+    * install minikube 
+- start minikube with `minikube start`    
+- run `./run_kubernetes.sh` 
+- run `./make_predictions.sh` on another terminal window
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
